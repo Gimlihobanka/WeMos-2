@@ -84,7 +84,7 @@ void loop() {
   Serial.print("Teplota cidla DS18B20: ");
   int teplota = senzoryDS.getTempCByIndex(0);
   Serial.print(senzoryDS.getTempCByIndex(0));
-  Serial.println(" stupnu Celsia");
+  Serial.println("°C");
   /* 
   // If packet received...
   int packetSize = UDP.parsePacket();
