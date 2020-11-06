@@ -112,7 +112,7 @@ void loop() {
   UDP.write(outputChar);
   UDP.endPacket();
 
-    delay(5000);
+    delay(10000);
     //ESP.deepSleep(10e6, RF_DEFAULT);
   //}
  
