@@ -11,6 +11,8 @@
 #define WIFI_PASS "greenballoon560"
 #define UDP_PORT 515
 
+
+
 // UDP
 WiFiUDP UDP;
 char packet[255];
@@ -31,6 +33,11 @@ OneWire oneWireDS(pinCidlaDS);
 DallasTemperature senzoryDS(&oneWireDS);
    
 void setup() {
+
+  delay(100);
+
+  //pinMode(0, OUTPUT);    // sets the digital pin 13 as output
+  //digitalWrite(0, HIGH);
   // Setup serial port
   Serial.begin(9600);
   Serial.println("Serial begin");
@@ -112,8 +119,8 @@ void loop() {
   UDP.write(outputChar);
   UDP.endPacket();
 
-    delay(10000);
-    //ESP.deepSleep(10e6, RF_DEFAULT);
+    //delay(10000);
+    ESP.deepSleep(10e6, RF_DEFAULT);
   //}
  
 }
